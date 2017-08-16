@@ -22,6 +22,8 @@ KUBERNETES_VERIFY_SSL=${KUBERNETES_VERIFY_SSL:-true}
 
 mkdir /etc/fluent
 
+# If FLUENTD_NO_CONF_OVERWRITE is _not_ set
+if [ ! -v FLUENTD_NO_CONF_OVERWRITE ]; then
 cat << EOF >> /etc/fluent/fluent.conf
 # input plugin that exports metrics
 <source>
@@ -89,5 +91,6 @@ EOF
 cat << 'EOF' >> /etc/fluent/fluent.conf
 </match>
 EOF
+fi # FLUENTD_NO_CONF_OVERWRITE
 
 exec je fluentd
