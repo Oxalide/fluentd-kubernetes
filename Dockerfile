@@ -12,6 +12,10 @@ RUN scl enable rh-ruby23 'gem install --no-document fluent-plugin-kubernetes_met
     scl enable rh-ruby23 'gem install --no-document fluent-plugin-elasticsearch -v 1.9.5' && \
     scl enable rh-ruby23 'gem install --no-document fluent-plugin-prometheus -v 0.2.1' && \
     scl enable rh-ruby23 'gem install --no-document fluent-plugin-logmatic -v 0.9.1' && \
+    scl enable rh-ruby23 'gem install --no-document fluent-plugin-concat' && \
+    scl enable rh-ruby23 'gem install --no-document fluent-plugin-secure-forward' && \
+    scl enable rh-ruby23 'gem install --no-document fluent-plugin-record-reformer' && \
+    scl enable rh-ruby23 'gem install --no-document fluent-plugin-gelf-hs' && \
     scl enable rh-ruby23 'gem cleanup fluentd'
 
 ADD start-fluentd /start-fluentd
