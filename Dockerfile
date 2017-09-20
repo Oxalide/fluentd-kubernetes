@@ -16,6 +16,7 @@ RUN scl enable rh-ruby23 'gem install --no-document fluent-plugin-kubernetes_met
     scl enable rh-ruby23 'gem install --no-document fluent-plugin-secure-forward' && \
     scl enable rh-ruby23 'gem install --no-document fluent-plugin-record-reformer' && \
     scl enable rh-ruby23 'gem install --no-document fluent-plugin-gelf-hs' && \
+    scl enable rh-ruby23 'gem install --no-document fluent-plugin-parser' && \
     scl enable rh-ruby23 'gem cleanup fluentd'
 
 ADD start-fluentd /start-fluentd
