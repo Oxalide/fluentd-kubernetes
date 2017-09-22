@@ -1,4 +1,4 @@
-FROM fabric8/fluentd:0.14.8
+FROM fabric8/fluentd:v1.21
 
 MAINTAINER Christophe Gasmi <christophe.gasmi@oxalide.com>
 
