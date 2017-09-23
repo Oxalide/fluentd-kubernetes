@@ -1,4 +1,4 @@
-FROM fabric8/fluentd:v1.21
+FROM fabric8/fluentd-kubernetes:v1.21
 
 MAINTAINER Christophe Gasmi <christophe.gasmi@oxalide.com>
 
